@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atakanozogul</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Atakan</a>
+        <ul>
+            <li><a href="#" class="active">Anasayfa</a></li>
+            <li><a href="#page2">Hakkımda</a></li>
+            <li><a href="#page3">İletişim</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Atakan Özoğul</h2>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="page2">
+        <h2>Hakkımda</h2>
+        <img src="atakan.jpg" class="img">
+        <p>
+            Adım Atakan. 1998 yılında Konya'nın Ereğli ilçesinde doğdum.<br><br>
+            Ereğli Anadolu Lisesinden 2016'da mezun oldum.<br><br>
+            2017'de Kocaeli Üniversitesi Metalurji ve Malzeme Mühendisliğini kazandım.<br><br>
+            Üniversitemi 2021'de tamamladıktan sonra Bilge Adam Teknoloji şirketinde Boost Programına başladım.<br><br>
+            Programda C# üzerinden Web geliştirme görmekteyim.<br><br>
+        </p>
+    </div>
+    <div class="sec2" id="page3">
+        <h2>İletişim</h2>
+        <p>
+            Mail : atakanozogul@hotmail.com<br><br>
+            Telefon : 0537 048 50 55<br><br>
+            <a class="difLink" href="https://www.instagram.com/atakanozogul/">Instagram Hesabım</a><br><br>
+            <a class="difLink" href="https://www.linkedin.com/in/cevat-atakan-%C3%B6zo%C4%9Ful-4759a6163/">Linkedin Hesabım</a><br><br>
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
